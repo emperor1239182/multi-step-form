@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+    border: 0px;
+}
+$size: 30px;
+$weight: bolder;
+$realColor: hsl(213, 96%, 18%);
+$smallTextColor: hsl(231, 11%, 63%);
+body{
+    background-color:  hsl(229, 24%, 87%);
+}
+.container{
+    border-radius: 10px;
+    background-color: hsl(231, 100%, 99%);
+    max-width: 60%;
+    padding: 10px;
+    margin: auto auto;
+    display: flex;
+    justify-content: space-between;
+}
+.personalInfo{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: auto;
+
+    .next{
+        border-radius: 8px;
+        background-color: $realColor;
+        padding: 12px;
+        max-width: 100px;
+        align-self: self-end;
+        color: white;
+    }
+    .heading{
+        font-size: $size;
+        font-size: $weight;
+        color: $realColor;
+    }
+    .additionalText{
+        font-size: 15px;
+        color: $smallTextColor;
+    }
+    
+    input{
+        border: 1px solid grey;
+        border-radius: 8px;
+        padding: 12px;
+    }
+}
+.plans{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    .billing{
+        border: 1px solid grey;
+        border-radius: 6px;
+        width: 300px;
+        padding: 10px;
+    }
+}
+.duration{
+    display: flex;
+    justify-content: center;
+    background-color:  hsl(217, 100%, 97%);
+}
+
+.back{
+    border-radius: 8px;
+        background-color: $realColor;
+        padding: 12px;
+        max-width: 100px;
+        align-self: self-start;
+        color: white;
+}
