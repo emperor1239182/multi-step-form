@@ -1,5 +1,8 @@
 import { Subs } from "./sub"
+import { useState } from "react"
+
 export const Subscription = ()=>{
+  const [monthly, setMonthly ] = useState(true)
     return(
         <>
         <div className="personalInfo">
@@ -8,21 +11,32 @@ export const Subscription = ()=>{
         <div className="plans">
           {Object.keys(Subs.images).map((item)=> (
             <div key={item} className="billing">
-                {Subs.images[item]}
-                <p style={{marginBottom:'0px'}}>
-                <span style={{fontSize: '14px', fontWeight: 'bold', color:'hsl(213, 96%, 18%)'}}>{Subs.names[item]}</span> <br/>
-                <span>{Subs.monthlyPrices[item]}</span>
+                {Subs.images[item]} <br/> <br/>
+                <p style={{marginBottom:'0px', fontSize:'12px', fontWeight:'bold'}}>
+                <span style={{ color:'hsl(213, 96%, 18%)'}}>{Subs.names[item]}</span> <br/>
+                <span style={{color:'hsl(231, 11%, 63%)'}}>{Subs.monthlyPrices[item]}</span>
                 </p>
             </div>
           ))}
-            </div>
+            </div> <br/>
             <div className="duration">
-                    <p>Monthly</p>
-                <button type="toggle">on</button>
-                <p>Yearly</p>
+            
+      <span className={monthly ? "active" : ""}>Monthly</span>
+      <label className="switch">
+        <input
+          type="checkbox"
+          checked={!monthly}
+          onChange={() => setMonthly(!monthly)}
+        />
+        <span className="slider"></span>
+      </label>
+      <span className={setMonthly ? "active" : ""}>Yearly</span>
                 
-                </div>
+                </div> <br/> <br/> <br/> <br/>
+                <div className="nav">
                 <button className="back">Go Back</button>
+                <button className="next">Next Step</button>
+                </div>
                 
 
             

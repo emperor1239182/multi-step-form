@@ -13,7 +13,7 @@ body{
     border-radius: 10px;
     background-color: hsl(231, 100%, 99%);
     max-width: 60%;
-    padding: 10px;
+    padding: 10px 0px;
     margin: auto auto;
     display: flex;
     justify-content: space-between;
@@ -52,7 +52,7 @@ body{
 .plans{
     display: flex;
     justify-content: space-between;
-    gap: 5px;
+    gap: 10px;
     .billing{
         border: 1px solid grey;
         border-radius: 6px;
@@ -62,15 +62,78 @@ body{
 }
 .duration{
     display: flex;
-    justify-content: center;
-    background-color:  hsl(217, 100%, 97%);
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #f8f9fd;
+  padding: 10px 20px;
+  border-radius: 10px;
+  span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #94a3b8;
+    transition: color 0.3s;
+  }
+  .active {
+    color: #02295a;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #02295a;
+    border-radius: 20px;
+    transition: 0.3s;
+  }
+  
+  .slider::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+  
+  input:checked + .slider {
+    background-color: #02295a;
+  }
+  
+  input:checked + .slider::before {
+    transform: translateX(20px);
+  }
 }
 
 .back{
     border-radius: 8px;
-        background-color: $realColor;
+        color: $smallTextColor;
         padding: 12px;
         max-width: 100px;
         align-self: self-start;
-        color: white;
 }
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
