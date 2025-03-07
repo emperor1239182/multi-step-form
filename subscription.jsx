@@ -2,7 +2,7 @@ import { Subs } from "./sub"
 import { useState } from "react"
 
 export const Subscription = ()=>{
-  const [monthly, setMonthly ] = useState(true)
+  const [monthly, setMonthly ] = useState(false)
     return(
         <>
         <div className="personalInfo">
@@ -13,24 +13,23 @@ export const Subscription = ()=>{
             <div key={item} className="billing">
                 {Subs.images[item]} <br/> <br/>
                 <p style={{marginBottom:'0px', fontSize:'12px', fontWeight:'bold'}}>
-                <span style={{ color:'hsl(213, 96%, 18%)'}}>{Subs.names[item]}</span> <br/>
-                <span style={{color:'hsl(231, 11%, 63%)'}}>{Subs.monthlyPrices[item]}</span>
+                <span className="description">{Subs.names[item]}</span> <br/>
+                <span className="validity">{Subs.monthlyPrices[item]}</span>
                 </p>
             </div>
           ))}
             </div> <br/>
             <div className="duration">
-            
-      <span className={monthly ? "active" : ""}>Monthly</span>
+      <span className={ setMonthly ? "active" : ""}>Monthly</span>
       <label className="switch">
         <input
           type="checkbox"
-          checked={!monthly}
+          checked={monthly}
           onChange={() => setMonthly(!monthly)}
         />
         <span className="slider"></span>
       </label>
-      <span className={setMonthly ? "active" : ""}>Yearly</span>
+      <span className={ monthly ? "active" : ""}>Yearly</span>
                 
                 </div> <br/> <br/> <br/> <br/>
                 <div className="nav">

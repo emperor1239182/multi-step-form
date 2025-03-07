@@ -2,7 +2,7 @@ export const Login = ()=>{
     return(
 
     <>
-    <form className="personalInfo">
+   <form className="personalInfo">
         <span className="heading">Personal info</span> 
         <span className="additionalText">Please provide your name, email address, and phone number</span> <br/>
         <label for="name" style={{fontSize: '10px', fontWeight: 'bold', color:'hsl(213, 96%, 18%)'}}>Name</label> 
