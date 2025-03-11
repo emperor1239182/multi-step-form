@@ -6,6 +6,34 @@ $size: 30px;
 $weight: bolder;
 $realColor: hsl(213, 96%, 18%);
 $smallTextColor: hsl(231, 11%, 63%);
+
+@mixin layout{
+  width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: auto;
+    .next{
+      border-radius: 8px;
+      background-color: hsl(243, 100%, 62%);
+      padding: 12px;
+      max-width: 100px;
+      align-self: self-end;
+      color: white;
+  }
+  .heading{
+      font-size: $size;
+      font-size: $weight;
+      color: $realColor;
+  }
+  .additionalText{
+      font-size: 15px;
+      color: $smallTextColor;
+  }
+  
+
+}
+
 body{
     background-color:  hsl(229, 24%, 87%);
 }
@@ -24,24 +52,6 @@ body{
     flex-direction: column;
     gap: 12px;
     margin: auto;
-
-    .next{
-        border-radius: 8px;
-        background-color: $realColor;
-        padding: 12px;
-        max-width: 100px;
-        align-self: self-end;
-        color: white;
-    }
-    .heading{
-        font-size: $size;
-        font-size: $weight;
-        color: $realColor;
-    }
-    .additionalText{
-        font-size: 15px;
-        color: $smallTextColor;
-    }
     
     input{
         border: 1px solid grey;
@@ -49,6 +59,17 @@ body{
         padding: 12px;
     }
 }
+
+.ads-on{
+  @include layout;
+}
+.subscription{
+  @include layout;
+}
+.summary{
+  @include layout;
+}
+
 .plans{
     display: flex;
     justify-content: space-between;
@@ -60,6 +81,7 @@ body{
         padding: 10px;
     }
 }
+
 .duration{
     display: flex;
   align-items: center;
@@ -143,12 +165,17 @@ body{
   border-radius: 8px;
   padding: 10px;
   font-size: 12px;
+  .description{
+    color: $realColor;
+    font-weight: bold;
+  }
+  .validity{
+    color: $smallTextColor;
+  }
+  .price{
+    color: $realColor;
+  }
 }
-.description{
-  color: hsl(213, 96%, 18%);
-  font-weight: bold;
-}
-.validity{
-  color:hsl(231, 11%, 63%);
-}
+
+
 

@@ -2,6 +2,7 @@ import './App.scss'
 import { Login } from './login';
 import { Subscription } from '../subscription';
 import { AddsOn } from './addsOn';
+import { Summary } from './summary';
 
 const App = ()=> {
 
@@ -21,7 +22,7 @@ const App = ()=> {
         <path fill="#FFAF7E" d="M.305 546.891c37.003 0 67-29.997 67-67s-29.997-67-67-67-67 29.997-67 67 29.997 67 67 67Z"/>
     </g>
 </svg>
-<AddsOn/>
+<Subscription/>
 
 
 

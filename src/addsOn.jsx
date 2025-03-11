@@ -2,7 +2,7 @@
 export const AddsOn = ()=>{
     return(
         <>
-        <div className="personalInfo">
+        <div className="ads-on">
         <span className="heading">Pick add-ons</span> 
         <span className="additionalText">Add-ons help enhance your gaming experience</span> <br/>
         <div className="services">
@@ -15,7 +15,7 @@ export const AddsOn = ()=>{
                     <span className="validity">Access to multiplayer games</span>
                     </span>
                 </span>
-                <p>+$2/mo</p>
+                <p className="price">+$2/mo</p>
             </div> <br/>
             
             <div className="offers">
@@ -26,7 +26,7 @@ export const AddsOn = ()=>{
                     <span className="validity">Extra 1TB of cloud save</span>
                     </span>
                 </span>
-                <p>+$2/mo</p>
+                <p className="price">+$2/mo</p>
             </div> <br/>
 
             <div className="offers">
@@ -37,7 +37,7 @@ export const AddsOn = ()=>{
                     <span className="validity">Custom theme on your profile</span>
                     </span>
                 </span>
-                <p>+$2/mo</p>
+                <p className="price">+$2/mo</p>
             </div> <br/>
         </div>
 
