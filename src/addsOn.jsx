@@ -1,5 +1,6 @@
-
+import { Info } from "../Data";
 export const AddsOn = ()=>{
+    const {monthly} = Info(); 
     return(
         <>
         <div className="ads-on">
@@ -15,7 +16,11 @@ export const AddsOn = ()=>{
                     <span className="validity">Access to multiplayer games</span>
                     </span>
                 </span>
-                <p className="price">+$2/mo</p>
+                {monthly ?  
+                <p className="price">+$2/mo</p> : 
+                <p className="price">+$10/yr</p>
+            }
+                
             </div> <br/>
             
             <div className="offers">
@@ -26,7 +31,10 @@ export const AddsOn = ()=>{
                     <span className="validity">Extra 1TB of cloud save</span>
                     </span>
                 </span>
-                <p className="price">+$2/mo</p>
+                {monthly ? 
+                <p className="price">+$2/mo</p> : 
+                <p className="price">+$20/yr</p>
+            }
             </div> <br/>
 
             <div className="offers">
@@ -37,7 +45,10 @@ export const AddsOn = ()=>{
                     <span className="validity">Custom theme on your profile</span>
                     </span>
                 </span>
-                <p className="price">+$2/mo</p>
+                {monthly ? 
+                <p className="price">+$2/mo</p> : 
+                <p className="price">+$20/yr</p>
+            }
             </div> <br/>
         </div>
 
