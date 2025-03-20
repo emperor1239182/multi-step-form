@@ -13,14 +13,8 @@ $smallTextColor: hsl(231, 11%, 63%);
     flex-direction: column;
     gap: 12px;
     margin: auto;
-    .next{
-      border-radius: 8px;
-      background-color: hsl(243, 100%, 62%);
-      padding: 12px;
-      max-width: 100px;
-      align-self: self-end;
-      color: white;
-  }
+    
+
   .heading{
       font-size: $size;
       font-size: $weight;
@@ -147,17 +141,26 @@ body{
   }
 }
 
-.back{
-    border-radius: 8px;
-        color: $smallTextColor;
-        padding: 12px;
-        max-width: 100px;
-        align-self: self-start;
-}
 .nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    .back{
+      border-radius: 8px;
+          color: $smallTextColor;
+          padding: 12px;
+          max-width: 100px;
+          align-self: flex-start;
+  }
+  .next{
+    border-radius: 8px;
+    background-color: hsl(213, 96%, 18%);
+    padding: 12px;
+    max-width: 100px;
+    align-self: flex-end;
+    color: white;
+  }
+    
 }
 .offers{
   display: flex;

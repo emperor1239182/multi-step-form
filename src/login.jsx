@@ -1,3 +1,4 @@
+import { Navigator } from "./navigator"
 export const Login = ()=>{
     return(
 
@@ -11,7 +12,7 @@ export const Login = ()=>{
         <input type="email" placeholder="e.g. stephenking@gmail.com" name="email"></input> 
         <label for="number" style={{fontSize: '10px', fontWeight: 'bold', color:'hsl(213, 96%, 18%)'}} >Phone Number</label> 
         <input type="text" placeholder="e.g. 123456789" name="number"></input> <br/> <br/> <br/>
-        <button className="next" type="submit">Next Step</button>
+        
     </form>
     </>
     )

@@ -1,5 +1,6 @@
 import { Subs } from "./sub";
 import { Info } from "./Data";
+import { Navigator } from "./src/navigator";
 
 export const Subscription = () => {
   const {data, monthly, handleData, handleDate } = Info()
@@ -49,10 +50,6 @@ export const Subscription = () => {
         </div>
         <br />
         <br />
-        <div className="nav">
-          <button className="back">Go Back</button>
-          <button className="next">Next Step</button>
-        </div>
       </div>
   );
 };
