@@ -7,11 +7,11 @@ export const Subscription = () => {
 
   return (
       <div className="subscription">
-        <span className="heading">Select your plan</span>
+        <span className="heading">Select your plan</span> <br/>
         <span className="additionalText">
           You have the option of monthly or yearly billing.
         </span>
-        <br />
+        <br /> <br/>
         <div className="plans">
           {Subs.filter((item) => item.id).map((item) => (
             <div

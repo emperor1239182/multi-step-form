@@ -21,7 +21,7 @@ export const Navigator = () => {
     };
 
     return (
-        <>
+        <div className='navigator'>
             {options[currentIndex]}
             <div className="nav">
                 <button className="back" onClick={navigateBackward} disabled={currentIndex === 0}>
@@ -31,6 +31,6 @@ export const Navigator = () => {
                     Next Step
                 </button>
             </div>
-        </>
+        </div>
     );
 };

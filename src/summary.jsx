@@ -4,8 +4,8 @@ export const Summary = ()=>{
     const {data} = Info();
     return(
         <div className="summary">
-            <span className="heading">Finishing up</span> 
-            <span className="additionalText">Double-check everything looks OK before confirming.</span> <br/>
+            <span className="heading">Finishing up</span> <br/>
+            <span className="additionalText">Double-check everything looks OK before confirming.</span> <br/> <br/>
             {data ? (
                 <div className="summaryCard">
                     <span className="description">{data.name || "Plan"}</span>

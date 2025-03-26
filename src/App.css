@@ -15,31 +15,49 @@ body {
   margin: auto auto;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
-
-.personalInfo {
+.container .navigator {
   width: 45%;
   display: flex;
   flex-direction: column;
   gap: 12px;
   margin: auto;
 }
-.personalInfo .next {
-  border-radius: 8px;
-  background-color: hsl(213, 96%, 18%);
-  padding: 12px;
-  max-width: 100px;
-  align-self: self-end;
-  color: white;
-}
-.personalInfo .heading {
+.container .navigator .heading {
   font-size: 30px;
   font-size: bolder;
   color: hsl(213, 96%, 18%);
 }
-.personalInfo .additionalText {
+.container .navigator .additionalText {
   font-size: 15px;
   color: hsl(231, 11%, 63%);
+}
+.container .navigator .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.container .navigator .nav .back {
+  border-radius: 8px;
+  color: hsl(231, 11%, 63%);
+  padding: 12px;
+  max-width: 100px;
+}
+.container .navigator .nav .next {
+  border-radius: 8px;
+  background-color: hsl(213, 96%, 18%);
+  padding: 12px;
+  max-width: 100px;
+  color: white;
+}
+
+.personalInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: auto;
 }
 .personalInfo input {
   border: 1px solid grey;
@@ -57,6 +75,7 @@ body {
   border-radius: 6px;
   width: 300px;
   padding: 10px;
+  cursor: pointer;
 }
 
 .duration {
@@ -117,20 +136,6 @@ body {
   transform: translateX(20px);
 }
 
-.back {
-  border-radius: 8px;
-  color: hsl(231, 11%, 63%);
-  padding: 12px;
-  max-width: 100px;
-  align-self: self-start;
-}
-
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .offers {
   display: flex;
   justify-content: space-between;
@@ -139,12 +144,13 @@ body {
   padding: 10px;
   font-size: 12px;
 }
-
-.description {
+.offers .description {
   color: hsl(213, 96%, 18%);
   font-weight: bold;
 }
-
-.validity {
+.offers .validity {
   color: hsl(231, 11%, 63%);
+}
+.offers .price {
+  color: hsl(213, 96%, 18%);
 }/*# sourceMappingURL=App.css.map */

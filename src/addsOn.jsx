@@ -5,8 +5,8 @@ export const AddsOn = ()=>{
     return(
         <>
         <div className="ads-on">
-        <span className="heading">Pick add-ons</span> 
-        <span className="additionalText">Add-ons help enhance your gaming experience</span> <br/>
+        <span className="heading">Pick add-ons</span> <br/>
+        <span className="additionalText">Add-ons help enhance your gaming experience</span> <br/> <br/>
         <div className="services">
 
             <div className="offers">
