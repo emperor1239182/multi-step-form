@@ -12,14 +12,15 @@ export const AddsOn = ()=>{
             <div className="offers">
             <span style={{display:'flex', gap:'10px'}}>
                     <input type="checkbox" onChange={(e) => {
-        if (e.target.checked) {
-            // Get only the text content of '.description'
-            handleData(e.target.nextSibling.querySelector('.description').textContent);
-        } else {
-            // Reset or handle unchecked state if needed
-            handleData(null);
-        }
-    }}></input>
+  if (e.target.checked) {
+    handleData((prevData) => [...(prevData || []), e.target.nextSibling.querySelector('.description').textContent]);
+  } else {
+    handleData((prevData) =>
+      (prevData || []).filter((desc) => desc !== e.target.nextSibling.querySelector('.description').textContent)
+    );
+  }
+}}
+></input>
                     <span style={{display:'flex', flexDirection:'column'}}>
                     <span className="description">Online service</span> 
                     <span className="validity">Access to multiplayer games</span>
@@ -35,14 +36,15 @@ export const AddsOn = ()=>{
             <div className="offers">
             <span style={{display:'flex', gap:'10px'}}>
                     <input type="checkbox" onChange={(e) => {
-        if (e.target.checked) {
-            // Get only the text content of '.description'
-            handleData(e.target.nextSibling.querySelector('.description').textContent);
-        } else {
-            // Reset or handle unchecked state if needed
-            handleData(null);
-        }
-    }}></input>
+  if (e.target.checked) {
+    handleData((prevData) => [...(prevData || []), e.target.nextSibling.querySelector('.description').textContent]);
+  } else {
+    handleData((prevData) =>
+      (prevData || []).filter((desc) => desc !== e.target.nextSibling.querySelector('.description').textContent)
+    );
+  }
+}}
+></input>
                     <span style={{display:'flex', flexDirection:'column'}}>
                     <span className="description">Larger storage</span> 
                     <span className="validity">Extra 1TB of cloud save</span>
@@ -57,14 +59,15 @@ export const AddsOn = ()=>{
             <div className="offers">
                 <span style={{display:'flex', gap:'10px'}}>
                     <input type="checkbox" onChange={(e) => {
-        if (e.target.checked) {
-            // Get only the text content of '.description'
-            handleData(e.target.nextSibling.querySelector('.description').textContent);
-        } else {
-            // Reset or handle unchecked state if needed
-            handleData(null);
-        }
-    }}></input>
+  if (e.target.checked) {
+    handleData((prevData) => [...(prevData || []), e.target.nextSibling.querySelector('.description').textContent]);
+  } else {
+    handleData((prevData) =>
+      (prevData || []).filter((desc) => desc !== e.target.nextSibling.querySelector('.description').textContent)
+    );
+  }
+}}
+></input>
                     <span style={{display:'flex', flexDirection:'column'}}>
                     <span className="description">Customizable profile</span> 
                     <span className="validity">Custom theme on your profile</span>

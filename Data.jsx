@@ -3,7 +3,7 @@ export const dataStorage = createContext();
 
 export const DataInfo = ({children})=>{
     const [monthly, setMonthly] = useState(true);
-    const [data, setData] = useState(null);
+    const [data, setData] = useState({});
 
 
     const handleData = (selectedItem)=>{
