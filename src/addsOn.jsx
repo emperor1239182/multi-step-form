@@ -1,5 +1,4 @@
 import { Info } from "../Data";
-import { Navigator } from "./navigator";
 export const AddsOn = ()=>{
     const {monthly, handleData} = Info(); 
     return(
@@ -11,14 +10,10 @@ export const AddsOn = ()=>{
 
             <div className="offers">
             <span style={{display:'flex', gap:'10px'}}>
-                    <input type="checkbox" onChange={(e) => {
-  if (e.target.checked) {
-    handleData((prevData) => [...(prevData || []), e.target.nextSibling.querySelector('.description').textContent]);
-  } else {
-    handleData((prevData) =>
-      (prevData || []).filter((desc) => desc !== e.target.nextSibling.querySelector('.description').textContent)
-    );
-  }
+                    <input type="checkbox"  onChange={(e) => {
+    const description = e.target.nextSibling.querySelector('.description').textContent;
+    const price = e.target.closest('.offers').querySelector('.price').textContent; // Get price correctly
+    handleData(description, price);
 }}
 ></input>
                     <span style={{display:'flex', flexDirection:'column'}}>
@@ -36,13 +31,9 @@ export const AddsOn = ()=>{
             <div className="offers">
             <span style={{display:'flex', gap:'10px'}}>
                     <input type="checkbox" onChange={(e) => {
-  if (e.target.checked) {
-    handleData((prevData) => [...(prevData || []), e.target.nextSibling.querySelector('.description').textContent]);
-  } else {
-    handleData((prevData) =>
-      (prevData || []).filter((desc) => desc !== e.target.nextSibling.querySelector('.description').textContent)
-    );
-  }
+    const description = e.target.nextSibling.querySelector('.description').textContent;
+    const price = e.target.closest('.offers').querySelector('.price').textContent; // Get price correctly
+    handleData(description, price);
 }}
 ></input>
                     <span style={{display:'flex', flexDirection:'column'}}>
@@ -58,16 +49,11 @@ export const AddsOn = ()=>{
 
             <div className="offers">
                 <span style={{display:'flex', gap:'10px'}}>
-                    <input type="checkbox" onChange={(e) => {
-  if (e.target.checked) {
-    handleData((prevData) => [...(prevData || []), e.target.nextSibling.querySelector('.description').textContent]);
-  } else {
-    handleData((prevData) =>
-      (prevData || []).filter((desc) => desc !== e.target.nextSibling.querySelector('.description').textContent)
-    );
-  }
-}}
-></input>
+                    <input type="checkbox"  onChange={(e) => {
+    const description = e.target.nextSibling.querySelector('.description').textContent;
+    const price = e.target.closest('.offers').querySelector('.price').textContent; // Get price correctly
+    handleData(description, price);
+}}></input>
                     <span style={{display:'flex', flexDirection:'column'}}>
                     <span className="description">Customizable profile</span> 
                     <span className="validity">Custom theme on your profile</span>

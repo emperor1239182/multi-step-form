@@ -1,6 +1,5 @@
 import { Subs } from "./sub";
 import { Info } from "./Data";
-import { Navigator } from "./src/navigator";
 
 export const Subscription = () => {
   const {data, monthly, handleData, handleDate } = Info()
@@ -17,13 +16,12 @@ export const Subscription = () => {
             <div
               key={item.id}
               className="billing"
-              onClick={()=> handleData(item.id)}
-              // Pass item to getDetails
-              style={{
-                border: data === item.id ? "2px solid hsl(243, 100%, 62%)" : "", // Dynamic border
-                padding: "10px",
-                borderRadius: "5px",
-            }}
+              onClick={() => handleData(item.name, monthly ? item.price : Subs[3].yearlyPrices[item.name.toLowerCase()])}
+    style={{
+        border: data.some(selected => selected.name === item.name) ? "2px solid hsl(243, 100%, 62%)" : "", // Dynamic border
+        padding: "10px",
+        borderRadius: "5px",
+    }}
             >
               {item.image} <br /> <br />
               <p style={{ marginBottom: "0px", fontSize: "12px", fontWeight: "bold" }}>

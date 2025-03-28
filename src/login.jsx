@@ -1,4 +1,3 @@
-import { Navigator } from "./navigator"
 export const Login = ()=>{
     return(
 
