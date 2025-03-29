@@ -30,10 +30,33 @@ $smallTextColor: hsl(231, 11%, 63%);
 body{
     background-color:  hsl(229, 24%, 87%);
 }
+@media screen and (max-width: 500px) {
+ 
+  .container{
+    flex-direction: column;
+  }
+  .svg{
+    display: none;
+  }
+
+  .navigator{
+    width: 75%;
+    gap: 12px;
+    margin: auto;
+    }
+      .back{
+        visibility: hidden;
+    }
+      
+  }
+  
+  
+  
+
 .container{
     border-radius: 10px;
     background-color: hsl(231, 100%, 99%);
-    max-width: 60%;
+    max-width: 80%;
     padding: 10px 0px;
     margin: auto auto;
     display: flex;
@@ -176,25 +199,34 @@ body{
   }
 }
 
-.summaryItem{
+.summaryCard{
+  background-color: hsl(229, 24%, 87%, 0.2);
+  border-radius: 4px;
+  .summaryItem{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 12px;
+    .description{
+      color: $realColor;
+      font-weight: bold;
+    }
+    .price{
+      color: $smallTextColor;
+    }
+  }
+}
+.total{
   display: flex;
   justify-content: space-between;
-  border: 1px solid grey;
-  border-radius: 8px;
   padding: 10px;
   font-size: 12px;
   .description{
-    color: $realColor;
+    color: $smallTextColor;
     font-weight: bold;
   }
   .price{
-    color: $smallTextColor;
-  }
-  .total{
-    font-size: 20px;
+    color:  hsl(243, 100%, 62%);
     font-weight: bold;
-    color: $realColor;
   }
 }
-
-

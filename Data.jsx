@@ -6,16 +6,19 @@ export const DataInfo = ({children})=>{
     const [data, setData] = useState([]);
 
 
-    const handleData = (selectedItem, price) => {
+    const handleData = (name, price, isAddon = false) => {
         setData((prevData) => {
-            const itemExists = prevData.some(item => item.name === selectedItem && item.price === price);
-            if (itemExists) {
-                return prevData.filter(item => !(item.name === selectedItem && item.price === price)); // Remove if unchecked
+            if (isAddon) {
+                // Allow multiple add-ons, toggle selection
+                const exists = prevData.some((item) => item.name === name);
+                return exists ? prevData.filter((item) => item.name !== name) : [...prevData, { name, price }];
             } else {
-                return [...prevData, { name: selectedItem, price }]; // Add if checked
+                // Only one plan should be selected at a time
+                return [{ name, price }];
             }
         });
     };
+    
     
     
     const handleDate = () =>{

@@ -10,7 +10,7 @@ export const Login = ()=>{
         <label for="email" style={{fontSize: '10px', fontWeight: 'bold', color:'hsl(213, 96%, 18%)'}}>Email Address</label> 
         <input type="email" placeholder="e.g. stephenking@gmail.com" name="email"></input> 
         <label for="number" style={{fontSize: '10px', fontWeight: 'bold', color:'hsl(213, 96%, 18%)'}} >Phone Number</label> 
-        <input type="text" placeholder="e.g. 123456789" name="number"></input> <br/> <br/> <br/>
+        <input type="tel" placeholder="e.g. 123456789" name="number"></input> <br/> <br/> <br/>
         
     </form>
     </>

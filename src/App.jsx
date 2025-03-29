@@ -7,7 +7,7 @@ const App = ()=> {
     <>
       <div className='container' > 
         
-        <svg xmlns="http://www.w3.org/2000/svg" width="274" height="468" viewBox="0 0 274 568" style={{ fill: 'none' }}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="274" height="468" viewBox="0 0 274 568" style={{ fill: 'none' }} className='svg'>
     <rect width="274" height="568" fill="#483EFF" rx="10"/>
     <mask id="a" width="274" height="568" x="0" y="0" maskUnits="userSpaceOnUse" style={{ maskType: 'alpha' }}>
         <rect width="274" height="568" fill="#fff" rx="10"/>

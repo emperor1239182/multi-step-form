@@ -27,8 +27,9 @@ export const Navigator = () => {
                 <button className="back" onClick={navigateBackward} disabled={currentIndex === 0}>
                     Go Back
                 </button>
-                <button className="next" onClick={navigateForward} disabled={currentIndex === options.length - 1}>
-                    Next Step
+                <button className="next" onClick={navigateForward} disabled={currentIndex === options.length - 1}
+                style={{ backgroundColor: currentIndex === options.length - 1 ? 'hsl(243, 100%, 62%)' : '' }}>
+                    {currentIndex === options.length - 1 ? 'Confirm' : 'Next Step'}
                 </button>
             </div>
         </div>
