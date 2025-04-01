@@ -101,6 +101,9 @@ body{
               color: $smallTextColor;
               padding: 12px;
       }
+      .undo{
+        visibility: hidden;
+      }
       .next{
         border-radius: 8px;
         background-color: hsl(213, 96%, 18%);
