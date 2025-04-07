@@ -39,6 +39,10 @@ body{
     background-color: hsl(231, 100%, 99%);
     border-radius: 10px;
     position: relative;
+    margin-top: 100px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     .svg{
       display: none;
     }
@@ -52,7 +56,6 @@ body{
     .navigator{
       @include layout;
       width: 80%;
-      
     }
     .billing{
       display:flex;
@@ -67,7 +70,14 @@ body{
       padding: 6px 10px;
       margin: auto auto;
     }
-    
+    .mobileBar{
+      background-color: hsl(213, 88.50%, 44.50%);
+       width:98%;
+       position: absolute;
+       top: 0px;
+       z-index: -1;
+       margin-left: 0px;
+    }
       
   }
   
@@ -88,6 +98,14 @@ body{
       width: 45%;
       margin: auto auto;
     }
+}
+.mobileBar{
+  display: none;
+}
+.stepIndicator{
+  flex-direction: column;
+  position: fixed;
+  left: 0px;
 }
 }
 //navigation
@@ -261,4 +279,16 @@ body{
     color:  hsl(243, 100%, 62%);
     font-weight: bold;
   }
+}
+.stepIndicator{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  position: fixed;
+  top: 20px;
+  z-index: 1;
+  left: 25%;
+  width: 50%;
 }

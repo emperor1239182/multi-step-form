@@ -13,7 +13,15 @@ export const AddsOn = () => {
           { name: "Larger storage", validity: "Extra 1TB of cloud save", priceMonthly: "$2/mo", priceYearly: "$20/yr" },
           { name: "Customizable profile", validity: "Custom theme on your profile", priceMonthly: "$2/mo", priceYearly: "$20/yr" },
         ].map((addon, index) => (
-          <div key={index} className="offers">
+          <div key={index} className="offers"
+          style={{
+            border: data.some((item) => item.name === addon.name) 
+              ? "2px solid hsl(243, 100%, 62%)" 
+              : "", // Default border to avoid layout shift
+            padding: "10px",
+            borderRadius: "5px",
+          }}
+          >
             <span style={{ display: "flex", gap: "10px" }}>
               <input
                 type="checkbox"
@@ -25,6 +33,7 @@ export const AddsOn = () => {
                     true // This ensures it's treated as an add-on
                   );
                 }}
+                
               />
               <span style={{ display: "flex", flexDirection: "column" }}>
                 <span className="description">{addon.name}</span>

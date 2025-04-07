@@ -5,8 +5,23 @@ const App = ()=> {
 
   return (
     <>
+    <div className='mobileBar'>
+<svg viewBox="0 0 375 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF7E5F" />
+      <stop offset="25%" stop-color="#FD3A69" />
+      <stop offset="50%" stop-color="#A94CFF" />
+      <stop offset="75%" stop-color="#4D2DB7" />
+      <stop offset="100%" stop-color="#3A0CA3" />
+    </linearGradient>
+  </defs>
+  <path d="M0,0 C50,70 100,170 150,140 C200,110 250,50 300,80 C350,110 375,70 375,70 L375,200 L0,200 Z" fill="url(#gradient)" />
+</svg>
+
+</div>
       <div className='container'> 
-        
+        <div>
       <svg xmlns="http://www.w3.org/2000/svg" width="274" height="468" viewBox="0 0 274 568" style={{ fill: 'none' }} className='svg'>
     <rect width="274" height="568" fill="#483EFF" rx="10"/>
     <mask id="a" width="274" height="568" x="0" y="0" maskUnits="userSpaceOnUse" style={{ maskType: 'alpha' }}>
@@ -19,8 +34,9 @@ const App = ()=> {
         <path fill="#FFAF7E" d="M.305 546.891c37.003 0 67-29.997 67-67s-29.997-67-67-67-67 29.997-67 67 29.997 67 67 67Z"/>
     </g>
 </svg>
-
+</div>
 <Navigator/>
+
       </div>
   
     </>
