@@ -32,7 +32,7 @@ body{
 }
 
 //for smaller screens
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 600px) {
  
   .container{
     flex-direction: column;
@@ -72,11 +72,18 @@ body{
     }
     .mobileBar{
       background-color: hsl(213, 88.50%, 44.50%);
-       width:98%;
+       width:100%;
        position: absolute;
        top: 0px;
        z-index: -1;
        margin-left: 0px;
+    }
+    .stepIndicator{
+    left: 25%;
+    right: 25%;
+    }
+    .steps{
+      display: none;;
     }
       
   }
@@ -91,7 +98,7 @@ body{
     margin: auto auto;
     display: flex;
     justify-content: space-between;
-    position: relative;
+   position: relative;
       
     .navigator{
       @include layout;
@@ -102,11 +109,13 @@ body{
 .mobileBar{
   display: none;
 }
+
 .stepIndicator{
   flex-direction: column;
-  position: fixed;
-  left: 0px;
+  margin-top: 20px;
+  left: 14%;
 }
+
 }
 //navigation
 .nav{
@@ -289,6 +298,5 @@ body{
   position: fixed;
   top: 20px;
   z-index: 1;
-  left: 25%;
-  width: 50%;
+  
 }

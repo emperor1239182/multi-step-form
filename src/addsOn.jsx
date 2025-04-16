@@ -32,6 +32,7 @@ export const AddsOn = () => {
                     monthly ? addon.priceMonthly : addon.priceYearly,
                     true // This ensures it's treated as an add-on
                   );
+                  console.log(handleData)
                 }}
                 
               />
